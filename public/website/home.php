@@ -7,7 +7,7 @@ require_once("./website/header.php");
 ?>
 <div id="page">
     <div id="page-body">
-        <h2>Artsy-Fartsy</h2>
+        <h2><?= $DUMBDOG->site->name; ?></h2>
     </div>
     <div class="tiles">
         <?php
@@ -38,8 +38,15 @@ require_once("./website/header.php");
                             <p class="h5">
                                 By <a href="<?= str_replace(" ", "-", strtolower($product->meta_author)); ?>"><?= $product->meta_author; ?></a>
                             </p>
-                            <p style="padding-top: 20px">
+                            <p class="tile-buttons">
                                 <a href="<?= $product->url;?>" class="button">View</a>
+                                <?php
+                                if ($product->stock) {
+                                    ?>
+                                    <a href="/basket?add=true&id=<?= $product->id; ?>" class="button">Purchase</a>
+                                    <?php
+                                }
+                                ?>
                             </p>
                         </div>
                     </div>

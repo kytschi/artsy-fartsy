@@ -5,7 +5,7 @@
                         powered by <a href="https://github.com/kytschi/dumb-dog" target="_blank">dumb dog</a>
                     </p>
                     <a href="/sitemap">Sitemap</a>
-                    <a href="/privacy-policy">Privacy Policy</a>
+                    <a href="/privacy">Privacy</a>
                     <?php
                     foreach ($DUMBDOG->menu->footer as $item) {
                         ?>

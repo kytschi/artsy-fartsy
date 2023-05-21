@@ -145,3 +145,47 @@ footer div p a {
 .tile .image-box {
     width: 100%;
 }
+.tile-buttons {
+    padding-top: 20px;
+}
+.tile-buttons a {
+    float: left;
+    margin-right: 10px;
+}
+
+/* Header */
+header {
+    margin-bottom: 50px;
+}
+
+header nav {
+    float: left;
+}
+
+header #basket {
+    float: right;
+    background-image: url("./basket.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+}
+
+header #basket span {
+    margin-left: 30px;
+    background-color: var(--button-bk);
+    color: var(--button-text) !important;
+    padding: 7px 12px;
+    border-radius: 50%;
+    font-size: 12pt;
+}
+
+/* Buttons */
+.btn-add-basket {
+    display: block;
+    background-image: url("./add-basket.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+}

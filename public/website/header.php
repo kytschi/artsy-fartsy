@@ -21,5 +21,8 @@
                             </a>
                         </span>
                     </nav>
+                    <a id="basket" href="/basket">
+                        <span>0</span>
+                    </a>
                 </div>
             </header>
