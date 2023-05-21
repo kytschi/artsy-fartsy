@@ -23,7 +23,7 @@ foreach ($products as $product) {
                     <?= $product->name; ?>
                 </p>
                 <p class="h5">
-                    By <a href="<?= str_replace(" ", "-", strtolower($product->meta_author)); ?>"><?= $product->meta_author; ?></a>
+                    By <a href="/<?= str_replace(" ", "-", strtolower($product->meta_author)); ?>"><?= $product->meta_author; ?></a>
                 </p>
                 <p class="tile-buttons">
                     <a href="<?= $product->url;?>" class="button">View</a>
