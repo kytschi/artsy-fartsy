@@ -7,7 +7,7 @@ require_once("./website/header.php");
 ?>
 <div id="page">
     <div id="page-body">
-        <h2>Artsy-Fartsy</h2>
+        <h2><?= $DUMBDOG->page->name; ?></h2>
         <?= $DUMBDOG->page->content; ?>
     </div>
     <h3>My work</h3>
