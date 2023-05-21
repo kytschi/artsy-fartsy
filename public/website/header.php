@@ -15,11 +15,8 @@
             <header>
                 <div id="header">
                     <nav>
-                        <span class="nav-item">
-                            <a href="/" title="Go to Home">
-                                Home
-                            </a>
-                        </span>
+                        <a href="/" class="nav-item" title="Go to Home">Home</a>
+                        <a href="/artists" class="nav-item" title="Show me all the artists">Artists</a>
                     </nav>
                     <a id="basket" href="/basket">
                         <span>0</span>

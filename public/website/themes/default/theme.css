@@ -32,6 +32,10 @@ a, a:visited, a:focus {
     text-decoration: none;
     font-weight: bold;
 }
+a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
 button, .button {
     border: 0;
     background-color: var(--button-bk);
@@ -45,19 +49,7 @@ button, .button {
 }
 button:hover, .button:hover {
     font-weight: bold;
-}
-
-footer .row {
-    display: block;
-    float: left;
-    width: 100%;
-    margin-bottom: 10px;
-}
-footer div {
-    float: left;
-}
-footer div p a {
-    margin-top: 50px;
+    text-decoration: none;
 }
 
 .row {
@@ -92,8 +84,31 @@ footer div p a {
     font-size: 28pt;
     z-index: 100;
 }
+#page-body .image-box {
+    padding-top: 28px;
+}
+
 .borderless {
     border: 0 !important;
+}
+.float-right {
+    float: right;
+}
+
+/* Footer */
+footer {
+    margin-top: 80px;
+}
+footer .float-right a {
+    display: block;
+    float: left;
+    margin-left: 10px;
+}
+
+/* Headings */
+h2, h3, .h2 {
+    font-weight: bold;
+    font-size: 22pt;
 }
 
 /* Tiles */
@@ -157,11 +172,13 @@ footer div p a {
 
 /* Header */
 header {
-    margin-bottom: 50px;
+    margin-bottom: 80px;
 }
-
 header nav {
     float: left;
+}
+header nav .nav-item {
+    margin-right: 15px;
 }
 
 header #basket {

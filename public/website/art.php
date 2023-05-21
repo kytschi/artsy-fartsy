@@ -7,9 +7,9 @@ require_once("./website/header.php");
 ?>
 <div id="page">
     <div id="page-body">
-        <h2><?= $DUMBDOG->page->name; ?></h2>
         <div class="row">
             <div class="col">
+                <h2><?= $DUMBDOG->page->name; ?></h2>
                 <?= $DUMBDOG->page->content; ?>
                 <p class="tile-buttons">
                     <?php
@@ -44,5 +44,26 @@ require_once("./website/header.php");
             </div>
         </div>
     </div>
+    <?php
+    $products = $DUMBDOG->products([
+        "where" => [
+            "query" => "pages.parent_id = :parent_id AND pages.id != :id",
+            "data" => [
+                ":parent_id" => $DUMBDOG->page->parent_id,
+                ":id" => $DUMBDOG->page->id
+            ]
+        ]
+    ]);
+    if ($products) {
+        ?>
+        <h3>More from this artist</h3>
+        <div class="tiles">
+        <?php
+            require_once("./website/shared/art.php");
+        ?>
+        </div>
+        <?php
+    }
+    ?>
 </div>
 <?php require_once("./website/footer.php"); ?>
