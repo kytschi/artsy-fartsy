@@ -1,0 +1,147 @@
+@import url("style.css");
+
+html, body {
+    color: var(--body-text-colour);
+    background-color: var(--body-background-colour);
+    font-family: "body", Helvetica, sans-serif;
+    font-size: 14pt;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+body {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width:100%;
+    overflow-x: hidden;
+}
+main {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    z-index: 2;
+    padding: 60px 0px;
+}
+
+a, a:visited, a:focus {
+    color: var(--body-text-colour);
+    text-decoration: none;
+    font-weight: bold;
+}
+button, .button {
+    border: 0;
+    background-color: var(--button-bk);
+    text-transform: uppercase;
+    font-family: "body", Helvetica, sans-serif;
+    color: var(--button-text) !important;
+    font-weight: normal;
+    padding: 15px 30px;
+    font-size: 18pt;
+    cursor: pointer;
+}
+button:hover, .button:hover {
+    font-weight: bold;
+}
+
+footer .row {
+    display: block;
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+footer div {
+    float: left;
+}
+footer div p a {
+    margin-top: 50px;
+}
+
+.row {
+    display: flex;
+    column-gap: 50px;
+    margin-bottom: 50px;
+}
+.row .col {
+    width: 50%;
+}
+.image-box {
+    width: 50%;
+}
+.image {
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    font-size: 0;
+}
+.image img {
+    width: 100%;
+}
+.image-box .price {
+    float: right;
+    position: relative;
+    background-color: var(--button-bk);
+    color: var(--button-text) !important;
+    padding: 15px 30px;
+    font-size: 18pt;
+    margin-right: -10px;
+    margin-top: -50px;
+    font-size: 28pt;
+    z-index: 100;
+}
+.borderless {
+    border: 0 !important;
+}
+
+/* Tiles */
+@media only screen and (min-width: 480px) {
+    .tiles {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .tiles {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    .tiles {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+}
+
+.tiles {
+    column-gap: 40px;
+    margin-top: 20px;
+}
+.tile {
+    display: block;
+    break-inside: avoid-column;
+    margin: 0 0 40px 0;
+    width: 100%;
+    padding: 30px 50px;
+    border: 1px solid #000;
+}
+@-moz-document url-prefix() {
+    .tile {
+        display: inline-block;
+    }
+}
+.tile .media {
+    display: flex;
+    flex-direction: column;
+}
+.tile .image-box {
+    width: 100%;
+}

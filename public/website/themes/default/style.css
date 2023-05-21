@@ -1,0 +1,18 @@
+:root {
+    /* Body */
+    --body-background-colour: #fff;
+    --body-text-colour: #030202;
+
+    /* Buttons */
+    --button-bk: #030202;
+    --button-text: #fff;
+
+    /* Borders */
+    --border: #030202;
+}
+
+/* Fonts */
+@font-face {
+    font-family: 'body';
+    src: url('./AlexandriaFLF.ttf') format('truetype');
+}
