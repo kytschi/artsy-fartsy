@@ -45,19 +45,19 @@ require_once("./website/header.php");
                 <tfoot>
                     <tr>
                         <td>&nbsp;</td>
-                        <td width="200px" class="border">Sub-total</td>
+                        <td width="100px" class="border total">Sub-total</td>
                         <td class="border">&pound;<?= $basket->sub_total; ?></td>
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
                         <td>&nbsp;</td>
-                        <td class="border">Tax</td>
+                        <td class="border total">Tax</td>
                         <td class="border">&pound;<?= $basket->sub_total_tax; ?></td>
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
                         <td>&nbsp;</td>
-                        <td class="border">Total</td>
+                        <td class="border total">Total</td>
                         <td class="border">&pound;<?= $basket->total; ?></td>
                         <td>&nbsp;</td>
                     </tr>
