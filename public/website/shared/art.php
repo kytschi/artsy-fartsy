@@ -30,7 +30,7 @@ foreach ($products as $product) {
                     <?php
                     if ($product->stock) {
                         ?>
-                        <a href="/basket?add=true&id=<?= $product->id; ?>" class="button">Purchase</a>
+                        <a href="/basket?add=true&code=<?= $product->code; ?>" class="button">Purchase</a>
                         <?php
                     }
                     ?>

@@ -1,3 +1,6 @@
+<?php
+$basket = $DUMBDOG->basket();
+?>
 <!DOCTYPE html>
 <html lang='en'>
     <head>
@@ -19,7 +22,7 @@
                         <a href="/artists" class="nav-item" title="Show me all the artists">Artists</a>
                     </nav>
                     <a id="basket" href="/basket">
-                        <span>0</span>
+                        <span><?= $basket ? count($basket->items) : 0; ?></span>
                     </a>
                 </div>
             </header>

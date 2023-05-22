@@ -111,6 +111,37 @@ h2, h3, .h2 {
     font-size: 22pt;
 }
 
+table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border-top: 1px solid var(--border);
+}
+thead th {
+    background-color: var(--button-bk);
+    color: var(--button-text) !important;
+    padding: 10px;
+    text-align: left;
+}
+tbody, thead {
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+}
+tbody td {
+    padding: 10px;
+    border-bottom: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+}
+tfoot td {
+    padding: 10px;
+    text-align: right;
+}
+tfoot td.border {
+    border-bottom: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+}
+
 /* Tiles */
 @media only screen and (min-width: 480px) {
     .tiles {
@@ -207,4 +238,19 @@ header #basket span {
     background-size: contain;
     width: 50px;
     height: 50px;
+}
+
+#basket .price {
+    text-align: right;
+}
+#basket .btn-remove {
+    display: block;
+    background-image: url("./remove-basket.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+}
+#basket .btn-remove:hover {
+    text-decoration: none;
 }
