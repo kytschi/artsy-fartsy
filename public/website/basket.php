@@ -1,9 +1,9 @@
 <?php
 if (!empty($_GET['add']) && !empty($_GET['code'])) {
-    $DUMBDOG->addToBasket($_GET['code'], 1);
+    $DUMBDOG->basketAddTo($_GET['code'], 1);
     header("Location: /basket");
 } elseif (!empty($_GET['remove']) && !empty($_GET['id'])) {
-    $DUMBDOG->removeFromBasket($_GET['id']);
+    $DUMBDOG->basketRemoveFrom($_GET['id']);
     header("Location: /basket");
 }
 require_once("./website/header.php");
@@ -22,8 +22,8 @@ require_once("./website/header.php");
             <table id="basket">
                 <thead>
                     <tr>
-                        <th colspan="2">Product</th>
-                        <th width="150px">Price</th>
+                        <th colspan="2"><p>Product</p></th>
+                        <th width="150px"><p>Price</p></th>
                         <th width="50px">&nbsp;</th>
                     </tr>
                 </thead>
@@ -63,10 +63,15 @@ require_once("./website/header.php");
                     </tr>
                 </tfoot>
             </table>
+            <div>
+                <p>&nbsp;</p>
+                <a href="/checkout" class="button">checkout</a>
+            </div>
             <?php
         } else {
             ?>
-            <p>Your basket is currently empty</p>
+            <p>Your basket is currently empty</p><br/>
+            <p><a href="/" class="button">Home</a></p>
             <?php
         }
         ?>

@@ -5,6 +5,8 @@
 
     /* Buttons */
     --button-bk: #030202;
+    --button-bk-disabled: #555555;
+    --button-bk-active: #00aeff;
     --button-text: #fff;
 
     /* Borders */

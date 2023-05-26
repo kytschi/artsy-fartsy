@@ -1,4 +1,4 @@
-@import url("style.css");
+@import url("style.css?t=1");
 
 html, body {
     color: var(--body-text-colour);
@@ -87,6 +87,11 @@ button:hover, .button:hover {
 #page-body .image-box {
     padding-top: 28px;
 }
+#error {
+    padding: 1px 20px 20px 20px;
+    background-color: var(--button-bk);
+    color: var(--button-text) !important;
+}
 
 .borderless {
     border: 0 !important;
@@ -128,12 +133,12 @@ tbody, thead {
     border-right: 1px solid var(--border);
 }
 tbody td {
-    padding: 10px;
+    padding: 20px 10px;
     border-bottom: 1px solid var(--border);
     border-right: 1px solid var(--border);
 }
 tfoot td {
-    padding: 10px;
+    padding: 20px 10px;
     text-align: right;
 }
 tfoot td.border {
@@ -257,4 +262,64 @@ header #basket span {
 }
 #basket .btn-remove:hover {
     text-decoration: none;
+}
+
+/* Form */
+.form-input {
+    float: left;
+    width: calc(100% - 24px);
+    padding: 7px;
+    border: 1px solid var(--border);
+}
+
+/* Toggle switch */
+.switcher {
+    font-size: 0pt !important;
+}
+.switcher label * {
+    vertical-align: middle;
+    overflow: hidden;
+}
+.switcher input {
+    display: none;
+}
+.switcher label input + span {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    width: 100px;
+    height: 38.2px;
+    background-color: #fff;
+    border:1px solid var(--border);
+    transition: all 0.3s ease-in-out;
+}
+thead th .switcher label input + span {
+    border:1px solid #fff;
+}
+.switcher label input + span small {
+    position: absolute;
+    display: block;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 14pt;
+    padding-top: 7px;
+    background-color: var(--button-bk);
+    transition: all .15s ease;
+    box-shadow: none;
+    font-weight: 600;
+    text-align: center;
+    user-select: none;
+}
+.switcher label input:checked + span small {
+    background-color: #fff;
+    left: 50%;
+}
+.switcher label input:checked + span .switcher-off {
+    display: none;
+}
+.switcher label input:checked + span .switcher-on {
+    background-color: var(--button-bk);
+    display: block;
 }

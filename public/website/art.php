@@ -15,7 +15,7 @@ require_once("./website/header.php");
                     <?php
                     if ($DUMBDOG->page->stock) {
                         ?>
-                        <a href="/basket?add=true&id=<?= $DUMBDOG->page->id; ?>" class="button">Purchase</a>
+                        <a href="/basket?add=true&code=<?= $DUMBDOG->page->code; ?>" class="button">Purchase</a>
                         <?php
                     }
                     ?>
